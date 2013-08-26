@@ -1,5 +1,6 @@
 class CSVReader
   attr_accessor :fname
+  
   def initialize(filename)
     @fname = filename    
   end
@@ -30,6 +31,7 @@ class CSVReader
       values = next_line.split(',')
       hash = create_hash(values)
       yield(hash)
+    end
   end
 end
 
@@ -41,6 +43,4 @@ class String
     tr("-", "_").
     downcase
   end
-
-
 end

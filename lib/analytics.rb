@@ -53,7 +53,7 @@ attr_accessor :options
     p "There are #{c} zip code matches in California"
   end
 
-  def zip_info
+   def zip_info
     print "Enter zip: "
     zip = gets.strip.to_i
     zips = @areas.select { |a| a.zipcode == zip }
